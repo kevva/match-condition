@@ -21,6 +21,9 @@ matchCondition('unicorns', 'unicorns');
 matchCondition('unicorns', /^unicorns$/);
 //=> true
 
+matchCondition('unicorns', '*corns');
+//=> true
+
 matchCondition('unicorns', function (val) {
 	return val === 'unicorns';
 });
@@ -42,7 +45,7 @@ Value to be matched.
 #### condition
 
 *Required*  
-Type: `function`, `string`, `boolean` or `regex`
+Type: `function`, `string`, `glob`, `boolean` or `regex`
 
 Condition to match the value against.
 

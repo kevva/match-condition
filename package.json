@@ -29,7 +29,9 @@
     "value"
   ],
   "dependencies": {
-    "is-regex": "^1.0.3"
+    "is-glob": "^2.0.0",
+    "is-regex": "^1.0.3",
+    "micromatch": "^2.1.6"
   },
   "devDependencies": {
     "ava": "^0.0.4"
