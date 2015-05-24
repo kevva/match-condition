@@ -22,6 +22,7 @@
     "check",
     "conditional",
     "function",
+    "glob",
     "if",
     "match",
     "regex",
