@@ -35,7 +35,7 @@ matchCondition('unicorns', function (val) {
 
 ### matchCondition(value, condition)
 
-#### input
+#### value
 
 *Required*  
 Type: `mixed`
