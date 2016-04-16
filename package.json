@@ -13,7 +13,7 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "node test.js"
+    "test": "xo && ava"
   },
   "files": [
     "index.js"
@@ -35,6 +35,7 @@
     "micromatch": "^2.1.6"
   },
   "devDependencies": {
-    "ava": "^0.0.4"
+    "ava": "*",
+    "xo": "^0.14.0"
   }
 }

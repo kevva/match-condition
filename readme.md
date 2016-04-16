@@ -13,7 +13,7 @@ $ npm install --save match-condition
 ## Usage
 
 ```js
-var matchCondition = require('match-condition');
+const matchCondition = require('match-condition');
 
 matchCondition('unicorns', 'unicorns');
 //=> true
@@ -24,9 +24,7 @@ matchCondition('unicorns', /^unicorns$/);
 matchCondition('unicorns', '*corns');
 //=> true
 
-matchCondition('unicorns', function (val) {
-	return val === 'unicorns';
-});
+matchCondition('unicorns' val => val === 'unicorns');
 //=> true
 ```
 
@@ -37,14 +35,14 @@ matchCondition('unicorns', function (val) {
 
 #### value
 
-*Required*  
+*Required*<br>
 Type: `mixed`
 
 Value to be matched.
 
 #### condition
 
-*Required*  
+*Required*<br>
 Type: `function`, `string`, `glob`, `boolean` or `regex`
 
 Condition to match the value against.
