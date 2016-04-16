@@ -9,7 +9,7 @@ module.exports = function (val, condition) {
 	}
 
 	if (typeof condition === 'function') {
-		return condition(val) ? true : false;
+		return condition(val) === true;
 	}
 
 	if (isRegex(condition)) {
