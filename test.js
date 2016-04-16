@@ -1,24 +1,21 @@
-'use strict';
-var test = require('ava');
-var matchCondition = require('./');
+import test from 'ava';
+import matchCondition from './';
 
-test(function (t) {
-	t.assert(matchCondition('abc', true));
-	t.assert(matchCondition('abc', 'abc'));
-	t.assert(matchCondition('abc', /^abc$/));
-	t.assert(matchCondition('abc', '*bc'));
-	t.assert(!matchCondition('abc', false));
-	t.assert(!matchCondition('abc', 'dfg'));
-	t.assert(!matchCondition('abc', /^dfg$/));
-	t.assert(!matchCondition('abc', '!abc'));
+test(t => {
+	t.true(matchCondition('abc', true));
+	t.true(matchCondition('abc', 'abc'));
+	t.true(matchCondition('abc', /^abc$/));
+	t.true(matchCondition('abc', '*bc'));
+	t.false(matchCondition('abc', false));
+	t.false(matchCondition('abc', 'dfg'));
+	t.false(matchCondition('abc', /^dfg$/));
+	t.false(matchCondition('abc', '!abc'));
 
-	t.assert(matchCondition('abc', function (val) {
+	t.true(matchCondition('abc', function (val) {
 		return val === 'abc';
 	}));
 
-	t.assert(!matchCondition('abc', function (val) {
+	t.false(matchCondition('abc', function (val) {
 		return val === 'dfg';
 	}));
-
-	t.end();
 });
