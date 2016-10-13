@@ -1,9 +1,9 @@
 'use strict';
-var isGlob = require('is-glob');
-var isRegex = require('is-regex');
-var micromatch = require('micromatch');
+const isGlob = require('is-glob');
+const isRegex = require('is-regex');
+const micromatch = require('micromatch');
 
-module.exports = function (val, condition) {
+module.exports = (val, condition) => {
 	if (typeof condition === 'boolean') {
 		return condition;
 	}

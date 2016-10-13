@@ -35,14 +35,12 @@ matchCondition('unicorns' val => val === 'unicorns');
 
 #### value
 
-*Required*<br>
 Type: `mixed`
 
 Value to be matched.
 
 #### condition
 
-*Required*<br>
 Type: `function`, `string`, `glob`, `boolean` or `regex`
 
 Condition to match the value against.

@@ -1,21 +1,15 @@
 import test from 'ava';
-import matchCondition from './';
+import m from './';
 
 test(t => {
-	t.true(matchCondition('abc', true));
-	t.true(matchCondition('abc', 'abc'));
-	t.true(matchCondition('abc', /^abc$/));
-	t.true(matchCondition('abc', '*bc'));
-	t.false(matchCondition('abc', false));
-	t.false(matchCondition('abc', 'dfg'));
-	t.false(matchCondition('abc', /^dfg$/));
-	t.false(matchCondition('abc', '!abc'));
-
-	t.true(matchCondition('abc', function (val) {
-		return val === 'abc';
-	}));
-
-	t.false(matchCondition('abc', function (val) {
-		return val === 'dfg';
-	}));
+	t.true(m('abc', true));
+	t.true(m('abc', 'abc'));
+	t.true(m('abc', /^abc$/));
+	t.true(m('abc', '*bc'));
+	t.false(m('abc', false));
+	t.false(m('abc', 'dfg'));
+	t.false(m('abc', /^dfg$/));
+	t.false(m('abc', '!abc'));
+	t.true(m('abc', x => x === 'abc'));
+	t.false(m('abc', x => x === 'dfg'));
 });
