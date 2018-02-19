@@ -6,7 +6,7 @@
 ## Install
 
 ```
-$ npm install --save match-condition
+$ npm install match-condition
 ```
 
 
@@ -35,13 +35,13 @@ matchCondition('unicorns' val => val === 'unicorns');
 
 #### value
 
-Type: `mixed`
+Type: `string` `number`
 
 Value to be matched.
 
 #### condition
 
-Type: `function`, `string`, `glob`, `boolean` or `regex`
+Type: `Function` `string` `boolean` `RegExp`
 
 Condition to match the value against.
 
